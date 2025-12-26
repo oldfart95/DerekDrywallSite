@@ -46,8 +46,10 @@ export default function Header() {
   const phoneNumber = '740-416-2384';
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
-      <nav className="container mx-auto px-4 py-4">
+    <header className="sticky top-0 z-50 bg-white shadow-md relative overflow-hidden">
+      {/* Subtle texture overlay - industrial slate effect */}
+      <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(circle_at_1px_1px,rgb(0,0,0)_1px,transparent_0)] bg-[length:20px_20px] pointer-events-none"></div>
+      <nav className="container mx-auto px-4 py-4 relative z-10">
         <div className="flex items-center justify-between gap-3">
           {/* Logo */}
           <div className="flex-shrink-0">

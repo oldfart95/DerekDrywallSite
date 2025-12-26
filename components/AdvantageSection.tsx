@@ -1,21 +1,21 @@
 'use client';
 
-import { Users, Shield, Award } from 'lucide-react';
+import { ShieldCheck, HardHat, Hammer } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const advantages = [
   {
-    icon: Shield,
+    icon: ShieldCheck,
     title: 'Licensed & Fully Insured',
     description: 'Fully insured and licensed to protect your project and investment.',
   },
   {
-    icon: Users,
+    icon: HardHat,
     title: 'OSHA Compliant Crews',
     description: 'Safety-compliant crews trained to meet the highest industry standards.',
   },
   {
-    icon: Award,
+    icon: Hammer,
     title: 'Metal Stud Framing Experts',
     description: 'Specialized expertise in metal stud framing for commercial and residential projects.',
   },
@@ -54,7 +54,7 @@ export default function AdvantageSection() {
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-construction-gold/10 rounded-full">
                   <advantage.icon
-                    className="w-12 h-12 text-construction-gold"
+                    className="w-12 h-12 text-yellow-500"
                     strokeWidth={1.5}
                   />
                 </div>

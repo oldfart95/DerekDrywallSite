@@ -2,8 +2,27 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Superior Drywall Finishing - Commercial & Residential Drywall in Columbiana & Mahoning County",
-  description: "Premier commercial and residential drywall systems in Columbiana & Mahoning County. 15-man crew delivering Level 5 finishes, metal stud framing, and acoustic ceilings. Licensed, fully insured, OSHA compliant.",
+  title: "Premier Commercial Drywall | Superior Finishing",
+  description: "The 15-man crew General Contractors trust in Salem & Mahoning County.",
+  openGraph: {
+    title: "Premier Commercial Drywall | Superior Finishing",
+    description: "The 15-man crew General Contractors trust in Salem & Mahoning County.",
+    images: [
+      {
+        url: "/hero-leveled.JPG",
+        width: 1200,
+        height: 630,
+        alt: "Superior Drywall Finishing - Commercial drywall installation",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Premier Commercial Drywall | Superior Finishing",
+    description: "The 15-man crew General Contractors trust in Salem & Mahoning County.",
+    images: ["/hero-leveled.JPG"],
+  },
 };
 
 export default function RootLayout({

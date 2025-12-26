@@ -1,18 +1,23 @@
 'use client';
 
-import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
+  { icon: Facebook, href: 'https://www.facebook.com/SuperiorDrywall21/', label: 'Facebook' },
   { icon: Instagram, href: '#', label: 'Instagram' },
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ];
 
 export default function Footer() {
+  // Check if there are any valid social links (not just #)
+  const hasValidSocialLinks = socialLinks.some(link => link.href !== '#');
+
   return (
-    <footer id="contact" className="bg-slate-900 text-white scroll-mt-20">
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+    <footer id="contact" className="bg-slate-900 text-white scroll-mt-20 relative overflow-hidden">
+      {/* Subtle texture overlay - industrial slate effect */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_1px_1px,rgb(255,255,255)_1px,transparent_0)] bg-[length:20px_20px] pointer-events-none"></div>
+      <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
+        <div className={`grid grid-cols-1 ${hasValidSocialLinks ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-8 md:gap-12`}>
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-4">Superior Drywall Finishing</h3>
@@ -51,25 +56,41 @@ export default function Footer() {
                   Serving Salem, Columbiana, Canfield, Boardman, and the Greater Mahoning Valley
                 </span>
               </li>
+              <li className="flex items-center space-x-3">
+                <Facebook className="w-5 h-5 text-construction-gold" />
+                <a
+                  href="https://www.facebook.com/SuperiorDrywall21/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-construction-gold transition-colors text-base flex items-center space-x-1"
+                >
+                  <span>Facebook</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Social Links */}
-          <div>
-            <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-12 h-12 bg-slate-800 hover:bg-construction-gold rounded-full flex items-center justify-center transition-colors"
-                >
-                  <social.icon className="w-6 h-6" />
-                </a>
-              ))}
+          {/* Social Links - Only show if there are valid links */}
+          {hasValidSocialLinks && (
+            <div>
+              <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks
+                  .filter((social) => social.href !== '#')
+                  .map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      aria-label={social.label}
+                      className="w-12 h-12 bg-slate-800 hover:bg-construction-gold rounded-full flex items-center justify-center transition-colors"
+                    >
+                      <social.icon className="w-6 h-6" />
+                    </a>
+                  ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Bottom Bar */}
