@@ -33,7 +33,7 @@ export default function AdvantageSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            We Aren't a "Guy in a Truck." We Are a Workforce.
+            We Aren&apos;t a &quot;Guy in a Truck.&quot; We Are a Workforce.
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Construction delays cost money. Superior Drywall Finishing deploys fully insured, safety-compliant crews to handle large-scale builds. From 10,000 sq ft office build-outs to custom residential developments, we have the manpower to keep your timeline intact.
