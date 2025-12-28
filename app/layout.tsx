@@ -3,10 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Premier Commercial Drywall | Superior Finishing",
-  description: "The 15-man crew General Contractors trust in Salem & Mahoning County.",
+  description: "The drywall contractor General Contractors trust in Salem & Mahoning County.",
   openGraph: {
     title: "Premier Commercial Drywall | Superior Finishing",
-    description: "The 15-man crew General Contractors trust in Salem & Mahoning County.",
+    description: "The drywall contractor General Contractors trust in Salem & Mahoning County.",
     images: [
       {
         url: "/hero-leveled.JPG",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Premier Commercial Drywall | Superior Finishing",
-    description: "The 15-man crew General Contractors trust in Salem & Mahoning County.",
+    description: "The drywall contractor General Contractors trust in Salem & Mahoning County.",
     images: ["/hero-leveled.JPG"],
   },
 };

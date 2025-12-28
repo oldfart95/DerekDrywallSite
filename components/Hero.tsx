@@ -36,7 +36,7 @@ export default function Hero() {
             Premier Commercial & Residential Drywall Systems in Columbiana & Mahoning County.
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-5 md:mb-8 text-gray-200 drop-shadow-md">
-            The 15-man crew General Contractors trust. Delivering Level 5 finishes, metal stud framing, and acoustic ceilings on schedule.
+            The drywall contractor General Contractors trust. Delivering Level 5 finishes, metal stud framing, and acoustic ceilings on schedule.
           </h2>
 
           {/* CTA Buttons */}
